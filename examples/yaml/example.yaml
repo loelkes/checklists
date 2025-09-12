@@ -1,0 +1,31 @@
+document:
+  name: example_yaml
+  preamble: preamble.inc
+  title: My Checklist (YAML)
+
+checklists:
+  example:
+    title: Example Checklist
+    items:
+      - type: item
+        title: Checkitem 1
+        value: result
+      - type: item
+        title: Checkitem 2
+        value: another result
+        hints:
+          - I am a hint!
+          - Another hint!
+      - type: decision
+        title: Cold
+        steps:
+          - "Heater: On"
+          - "Windows: Closed"
+      - type: decision
+        title: Warm
+        steps:
+          - "Heater: Off"
+          - "Windows: Open"
+      - type: item
+        title: Checkitem 3
+        value: result

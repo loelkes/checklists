@@ -59,3 +59,26 @@ will look similar to this:
 
 You will find templates within the `examples/tex` directory.
 
+## Build from YAML, JSON or TOML files
+
+Install the package from this repository
+
+```shell
+pip install .
+```
+
+Create a configuration file formatted as JSON, TOML or YAML. A full
+configuration with all features are available in `examples/toml`,
+`examples/yaml/` and `examples/json/`.
+
+Run the script with
+
+```shell
+python -m checklists --config examples/json/example.json
+python -m checklists --config examples/toml/example.toml
+python -m checklists --config examples/yaml/example.yaml
+```
+
+PDF and Tex-Files are created at the path where the command was run, files are
+named after the `name` configuration.
+

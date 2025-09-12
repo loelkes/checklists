@@ -1,0 +1,21 @@
+[build-system]
+    build-backend = "setuptools.build_meta"
+    requires      = ["setuptools"]
+
+[tool.setuptools.packages.find]
+    where = ["src"]
+
+[tool.commitizen]
+    version_provider = "pep621"
+
+[tool.ruff]
+    line-length = 120
+
+[project]
+    dependencies    = ["PyLaTeX==1.4.2", "PyYAML==6.0.2", "msgspec==0.19.0"]
+    name            = "checklists"
+    requires-python = ">=3.12"
+    version         = "0.0.0"
+
+    [project.optional-dependencies]
+        dev = ["commitizen==4.9.1", "mdformat==0.7.22", "mdformat_tables==1.0.0", "ruff==0.12.12"]
